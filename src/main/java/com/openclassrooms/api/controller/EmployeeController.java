@@ -88,6 +88,10 @@ public class EmployeeController {
 				currentEmployee.setPassword(password);
 				;
 			}
+			int age = employee.getAge();
+			if (age != 0 && age > 0) {
+				currentEmployee.setAge(age);
+			}
 			employeeService.saveEmployee(currentEmployee);
 			return currentEmployee;
 		} else {
